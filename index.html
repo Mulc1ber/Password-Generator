@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h1>Password Generator</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="col-lg-6">
+                    <label for="passwordLength" class="form-label">Длина пароля: <span id="numLength"></span></label>
+                    <input type="range" class="form-range" id="passwordLength" value="10" max="30">
+                </div>
+                <form>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="number" checked>
+                        <label class="form-check-label" for="number">Числа</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="lowerSymbol" checked>
+                        <label class="form-check-label" for="lowerSymbol">Строчные буквы</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="upperSymbol">
+                        <label class="form-check-label" for="upperSymbol">Прописные буквы</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="specialSymbol">
+                        <label class="form-check-label" for="specialSymbol">Спец символы</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="generate">Generate</button>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div id="out"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
